@@ -1,4 +1,4 @@
-const API_URL = ""; // Isi dengan URL Cloudflare Worker setelah backend dipublikasikan.
+const API_URL = "https://sahabat-rosyida-learning-ai.alfaridzy87.workers.dev";
 const $ = (id) => document.getElementById(id);
 const views = ["home","research","method","review","emotional","assistant","progress"];
 let language = "id";
