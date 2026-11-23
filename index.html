@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#718879">
+  <title>Rosyida Learning Space</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" data-view="home">
+        <span class="brand-mark">r</span>
+        <span><strong>rosyida</strong><small>LEARNING SPACE</small></span>
+      </a>
+      <div class="side-label">RUANG BELAJAR</div>
+      <nav class="nav">
+        <button class="nav-item active" data-view="home"><span>⌂</span> Beranda</button>
+        <button class="nav-item" data-view="research"><span>✦</span> Research Navigator</button>
+        <button class="nav-item" data-view="method"><span>⌘</span> Methodology Center</button>
+        <button class="nav-item" data-view="review"><span>▤</span> Writing Reviewer</button>
+        <button class="nav-item" data-view="progress"><span>◷</span> Progress Planner</button>
+      </nav>
+      <div class="side-label">RUANG PERSONAL</div>
+      <nav class="nav">
+        <button class="nav-item" data-view="emotional"><span>♡</span> Emotional Space</button>
+        <button class="nav-item" data-view="assistant"><span>✧</span> Sahabat Rosyida</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-note"><span class="dot"></span><span>Ruang pribadi<br><b>Data tersimpan di perangkat</b></span></div>
+        <button class="profile-mini" id="profileBtn"><span class="avatar">M</span><span><b>My Space</b><small>Pengguna tamu</small></span><span class="more">•••</span></button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Buka menu">☰</button>
+        <div class="breadcrumb">Rosyida <span>/</span> <b id="crumb">Beranda</b></div>
+        <div class="top-actions">
+          <button class="lang-toggle" id="langToggle">ID / EN</button>
+          <button class="outline-btn" id="signInBtn">Masuk / Daftar</button>
+        </div>
+      </header>
+
+      <section class="view active" id="view-home">
+        <div class="welcome">
+          <div>
+            <div class="eyebrow">YOUR ACADEMIC & PERSONAL COMPANION</div>
+            <h1>Setiap langkah kecil<br><em>membawamu bertumbuh.</em></h1>
+            <p>Ruang untuk menemukan arah, mengembangkan gagasan, dan merawat semangat dalam perjalanan akademikmu.</p>
+            <button class="primary-btn" data-go="assistant">Mulai konsultasi <span>↗</span></button>
+          </div>
+          <div class="welcome-art">
+            <div class="sun"></div><div class="art-leaf leaf-one"></div><div class="art-leaf leaf-two"></div>
+            <div class="art-book"><i></i><i></i><i></i></div>
+            <span class="art-caption">learn · reflect · grow</span>
+          </div>
+        </div>
+
+        <div class="section-heading"><div><span class="eyebrow">YOUR SPACE</span><h2>Apa yang ingin kamu lakukan hari ini?</h2></div><span class="muted">Pilih ruang pendampingan</span></div>
+        <div class="feature-grid">
+          <button class="feature-card sage" data-go="research"><span class="feature-icon">✦</span><b>Menemukan arah penelitian</b><small>Topik, judul, gap, dan novelty.</small><span class="card-arrow">↗</span></button>
+          <button class="feature-card cream" data-go="method"><span class="feature-icon">⌘</span><b>Memahami metodologi</b><small>Pendekatan, desain, data, dan analisis.</small><span class="card-arrow">↗</span></button>
+          <button class="feature-card blush" data-go="review"><span class="feature-icon">▤</span><b>Meninjau tulisan ilmiah</b><small>Masukan dan rekomendasi perbaikan.</small><span class="card-arrow">↗</span></button>
+          <button class="feature-card green" data-go="emotional"><span class="feature-icon">♡</span><b>Merawat semangat</b><small>Refleksi, cerita, dan dukungan.</small><span class="card-arrow">↗</span></button>
+        </div>
+
+        <div class="bottom-grid">
+          <div class="panel quote-panel"><span class="eyebrow">A GENTLE REMINDER</span><div class="quote-mark">“</div><h3>Kamu tidak harus menyelesaikan semuanya hari ini. Cukup ambil satu langkah yang bermakna.</h3><p>Proses akademik adalah perjalanan, bukan perlombaan.</p></div>
+          <div class="panel quick-panel"><div class="panel-title"><h3>Ruang konsultasi</h3><span class="pill">AI Companion</span></div><p>Mulai percakapan dengan Sahabat Rosyida untuk mendiskusikan kebutuhan akademikmu.</p><button class="text-btn" data-go="assistant">Buka Sahabat Rosyida →</button></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-research">
+        <div class="page-intro"><span class="eyebrow">ACADEMIC GUIDANCE</span><h1>Research <em>Navigator</em></h1><p>Temukan dan pertajam arah penelitianmu, dari gagasan awal hingga rumusan masalah.</p></div>
+        <div class="two-col">
+          <div class="panel form-panel">
+            <h3>Petakan ide penelitian</h3><p class="muted">Ceritakan minat dan masalah yang ingin kamu kaji.</p>
+            <label>Jenjang pendidikan</label><select id="rLevel"><option>S1 — Skripsi</option><option>S2 — Tesis</option><option>S3 — Disertasi</option><option>Artikel ilmiah</option></select>
+            <label>Bidang keilmuan</label><input id="rField" placeholder="Contoh: Pendidikan, Psikologi, Manajemen...">
+            <label>Minat atau fenomena yang menarik perhatianmu</label><textarea id="rInterest" rows="4" placeholder="Tuliskan isu, pengalaman, atau fenomena yang ingin diteliti..."></textarea>
+            <label>Kendala saat ini</label><select id="rStage"><option>Belum menemukan topik</option><option>Sudah punya topik, belum punya judul</option><option>Sudah punya judul, mencari research gap</option><option>Ingin mempertajam novelty</option><option>Ingin menyusun rumusan masalah</option></select>
+            <button class="primary-btn full" id="researchAsk">Bantu petakan penelitian ↗</button>
+          </div>
+          <div class="panel result-panel"><div class="panel-title"><h3>Ruang hasil konsultasi</h3><span class="pill">Sahabat Rosyida</span></div><div id="researchResult" class="empty-state"><div class="empty-icon">✦</div><b>Gagasanmu dimulai di sini</b><p>Isi pemetaan di samping. AI akan membantu mengembangkan pertanyaan, alternatif arah, dan langkah berikutnya.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-method">
+        <div class="page-intro"><span class="eyebrow">RESEARCH DESIGN</span><h1>Methodology <em>Center</em></h1><p>Pahami pilihan metodologi dan pertimbangkan kesesuaiannya dengan tujuan penelitian.</p></div>
+        <div class="panel method-panel">
+          <div class="method-intro"><div><h3>Konsultasi desain penelitian</h3><p class="muted">Metode tidak dipilih karena tren, tetapi karena kesesuaiannya dengan pertanyaan penelitian.</p></div><div class="method-symbol">⌘</div></div>
+          <div class="form-grid">
+            <div><label>Jenjang</label><select id="mLevel"><option>S1</option><option>S2</option><option>S3</option><option>Artikel ilmiah</option></select></div>
+            <div><label>Pendekatan yang dipertimbangkan</label><select id="mApproach"><option>Belum menentukan</option><option>Kuantitatif</option><option>Kualitatif</option><option>Mixed methods</option><option>R&D / Pengembangan</option><option>Systematic Literature Review</option><option>Scoping Review</option></select></div>
+            <div class="span-2"><label>Tujuan atau pertanyaan penelitian</label><textarea id="mQuestion" rows="4" placeholder="Apa yang ingin diketahui, dijelaskan, dibandingkan, atau dikembangkan?"></textarea></div>
+          </div>
+          <button class="primary-btn" id="methodAsk">Konsultasikan metode ↗</button>
+          <div id="methodResult" class="inline-result empty-state">Hasil konsultasi metodologi akan muncul di sini.</div>
+        </div>
+        <div class="note-box"><b>Catatan akademik</b><p>Rekomendasi AI merupakan bahan pertimbangan. Keputusan metodologis tetap perlu disesuaikan dengan disiplin ilmu, ketersediaan data, pedoman institusi, dan arahan pembimbing.</p></div>
+      </section>
+
+      <section class="view" id="view-review">
+        <div class="page-intro"><span class="eyebrow">ACADEMIC WRITING</span><h1>Writing <em>Reviewer</em></h1><p>Dapatkan umpan balik yang spesifik, konstruktif, dan dapat ditindaklanjuti.</p></div>
+        <div class="two-col review-layout">
+          <div class="panel form-panel">
+            <h3>Tinjau tulisanmu</h3><p class="muted">Tempelkan bagian tulisan yang ingin dievaluasi.</p>
+            <label>Jenjang dan jenis karya</label><select id="wLevel"><option>S1 — Skripsi</option><option>S2 — Tesis</option><option>S3 — Disertasi</option><option>Artikel jurnal</option></select>
+            <label>Bagian naskah</label><select id="wPart"><option>Latar belakang</option><option>Rumusan masalah dan tujuan</option><option>Kajian teori / tinjauan pustaka</option><option>Metode penelitian</option><option>Hasil dan pembahasan</option><option>Kesimpulan</option><option>Abstrak</option><option>Bagian lainnya</option></select>
+            <label>Teks yang akan ditinjau</label><textarea id="wText" rows="10" placeholder="Tempelkan tulisanmu di sini..."></textarea>
+            <div class="small-hint">MVP saat ini menerima teks. Unggah PDF/DOCX akan ditambahkan pada pengembangan berikutnya.</div>
+            <button class="primary-btn full" id="reviewAsk">Evaluasi tulisan saya ↗</button>
+          </div>
+          <div class="panel result-panel"><div class="panel-title"><h3>Hasil penilaian</h3><span class="pill">Academic Review</span></div><div id="reviewResult" class="empty-state"><div class="empty-icon">▤</div><b>Tulisan layak mendapat perhatian</b><p>AI akan mengidentifikasi kekuatan, kelemahan, dan prioritas revisi. Penilaian bersifat formatif, bukan keputusan akademik final.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-emotional">
+        <div class="page-intro"><span class="eyebrow">A SPACE TO BREATHE</span><h1>Emotional <em>Space</em></h1><p>Kamu boleh berhenti sejenak, bercerita, dan menyusun kembali langkahmu.</p></div>
+        <div class="emotional-wrap">
+          <div class="panel emotional-card"><div class="emotional-art">♡</div><span class="eyebrow">YOU ARE NOT ALONE</span><h2>Apa yang sedang kamu rasakan?</h2><p class="muted">Tidak perlu menyusun kata-kata dengan sempurna. Mulailah dari apa yang paling terasa hari ini.</p>
+            <div class="feeling-chips" id="feelingChips"><button class="chip selected">Lelah</button><button class="chip">Cemas</button><button class="chip">Kehilangan motivasi</button><button class="chip">Bingung</button><button class="chip">Takut gagal</button><button class="chip">Merasa tertinggal</button></div>
+            <label>Ceritakan apa yang sedang terjadi</label><textarea id="eText" rows="5" placeholder="Aku sedang merasa..."></textarea>
+            <button class="primary-btn full" id="emotionAsk">Temani saya berefleksi ♡</button>
+            <div class="small-hint">Ruang ini untuk dukungan dan refleksi, bukan diagnosis atau pengganti bantuan psikologis profesional.</div>
+          </div>
+          <div class="panel result-panel"><div class="panel-title"><h3>Ruang refleksi</h3><span class="pill">Private space</span></div><div id="emotionResult" class="empty-state"><div class="empty-icon">♡</div><b>Ambil waktu untuk dirimu</b><p>Kamu tidak harus menghadapi seluruh tantangan sekaligus. Kita bisa mulai dengan satu hal yang paling membutuhkan perhatian.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-assistant">
+        <div class="page-intro"><span class="eyebrow">ALWAYS HERE TO HELP</span><h1>Sahabat <em>Rosyida</em></h1><p>Teman berdiskusi untuk perjalanan akademik dan pertumbuhan personalmu.</p></div>
+        <div class="chat-panel panel">
+          <div class="chat-header"><div class="bot-avatar">✧</div><div><b>Sahabat Rosyida</b><small><span class="online-dot"></span> Pendamping akademik & personal</small></div><button class="clear-chat" id="clearChat">Bersihkan percakapan</button></div>
+          <div class="chat-messages" id="chatMessages"><div class="message bot"><div class="message-avatar">R</div><div class="bubble"><b>Halo, selamat datang.</b><br>Aku Sahabat Rosyida. Kamu bisa berdiskusi tentang ide penelitian, metodologi, penulisan ilmiah, atau bercerita tentang perjalanan akademikmu. Apa yang ingin kamu bahas hari ini?</div></div></div>
+          <div class="suggestions"><button class="suggestion">Bantu saya menemukan judul skripsi</button><button class="suggestion">Saya bingung memilih metode penelitian</button><button class="suggestion">Saya kehilangan motivasi menulis</button></div>
+          <div class="chat-input"><textarea id="chatInput" rows="1" placeholder="Tulis pertanyaan atau ceritamu..."></textarea><button class="send-btn" id="sendChat" aria-label="Kirim">↑</button></div>
+          <div class="chat-foot">Sahabat Rosyida dapat keliru. Verifikasi informasi akademik dan jangan masukkan data pribadi atau rahasia.</div>
+        </div>
+      </section>
+
+      <section class="view" id="view-progress">
+        <div class="page-intro"><span class="eyebrow">SMALL STEPS MATTER</span><h1>Progress <em>Planner</em></h1><p>Ubah target besar menjadi langkah-langkah kecil yang dapat kamu kerjakan.</p></div>
+        <div class="two-col">
+          <div class="panel form-panel"><h3>Tambahkan target</h3><label>Target atau aktivitas</label><input id="taskInput" placeholder="Contoh: Merevisi rumusan masalah"><label>Tanggal target</label><input id="taskDate" type="date"><label>Tahap penelitian</label><select id="taskStage"><option>Persiapan penelitian</option><option>Proposal</option><option>Pengumpulan data</option><option>Analisis data</option><option>Penulisan hasil</option><option>Revisi dan finalisasi</option><option>Publikasi artikel</option></select><button class="primary-btn full" id="addTask">Simpan target +</button></div>
+          <div class="panel"><div class="panel-title"><h3>Daftar langkahmu</h3><span class="pill" id="taskCount">0 target</span></div><div id="taskList" class="task-list empty-state">Belum ada target. Tambahkan satu langkah kecil untuk memulai.</div></div>
+        </div>
+      </section>
+
+      <footer><span>© 2026 Rosyida Learning Space</span><span>Learn with care · Grow with purpose</span></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop"><div class="modal panel"><button class="modal-close" id="modalClose">×</button><span class="eyebrow">PERSONAL LEARNING SPACE</span><h2>Selamat datang di Rosyida</h2><p class="muted">Pada MVP ini, fitur personal menggunakan penyimpanan lokal di perangkat. Login lintas perangkat akan diaktifkan pada versi berikutnya.</p><label>Nama panggilan</label><input id="profileName" placeholder="Nama yang ingin digunakan"><label>Jenjang pendidikan</label><select id="profileLevel"><option>S1</option><option>S2</option><option>S3</option></select><button class="primary-btn full" id="saveProfile">Simpan profil lokal</button><div class="small-hint">Jangan gunakan perangkat bersama untuk menyimpan refleksi yang bersifat pribadi.</div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
